@@ -18,6 +18,30 @@ namespace SIB.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("SIB.Models.SIB_Ccuenta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Banco")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NoCuenta")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Saldo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TipoCuenta")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SIB_Ccuenta");
+                });
+
             modelBuilder.Entity("SIB.Models.SIB_Usuario", b =>
                 {
                     b.Property<int>("Id")

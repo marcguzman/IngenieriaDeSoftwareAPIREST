@@ -15,5 +15,7 @@ namespace SIB.Data
         }
 
         public DbSet<SIB.Models.SIB_Usuario> UserModel { get; set; }
+
+        public DbSet<SIB.Models.SIB_Ccuenta> SIB_Ccuenta { get; set; }
     }
 }
